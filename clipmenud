@@ -9,7 +9,7 @@
 # Buffer to batch to avoid calling too much. Only used if CM_MAX_CLIPS >0.
 CM_MAX_CLIPS_THRESH=$(( CM_MAX_CLIPS + 10 ))
 
-: "${CM_SELECTIONS:=clipboard primary}"
+: "${CM_SELECTIONS:=clipboard primary secondary}"
 read -r -a selections <<< "$CM_SELECTIONS"
 
 cache_dir=$(clipctl cache-dir)
