@@ -1,5 +1,16 @@
 [![Tests](https://img.shields.io/travis/cdown/clipmenu/develop.svg)](https://travis-ci.org/cdown/clipmenu)
 
+**Modified to print to stdout instead of copying to the primary keyboard**
+I'm using this together with a modified `clipnotify` and a color picker:  
+When I select something on the screen, a hex color is copied into the SECONDARY selection.  
+When I press a specific shortcut I open clipmenu and can select my history of picked colors.  
+TODO: 
+- Add a color preview on the left to the hex color code
+- Add color names to the right to be able to search for picked colors.
+~ schrmh
+
+README from the original repo (with link replaced to clipnotify to point to my fork of it):
+
 clipmenu is a simple clipboard manager using [dmenu][] (or [rofi][] with
 `CM_LAUNCHER=rofi`) and [xsel][].
 
@@ -83,7 +94,7 @@ it should be fairly self-explanatory. However, at the most basic level:
 
 ## clipmenud
 
-1. `clipmenud` uses [clipnotify](https://github.com/cdown/clipnotify) to wait
+1. `clipmenud` uses [clipnotify](https://github.com/schrmh/clipnotify) to wait
    for new clipboard events.
 2. If `clipmenud` detects changes to the clipboard contents, it writes them out
    to the cache directory and an index using a hash as the filename.
